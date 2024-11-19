@@ -1,0 +1,219 @@
+.LandingPage{
+    padding: 40px 0;
+}
+
+.line_upper{
+    background-color: #3F4854;
+    height: 2px;
+    width: 100%;
+    position: relative;
+}
+
+body{
+    background-color: #111827 !important;
+}
+
+.cir{
+    width: 30px ;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #111827;
+    background-color: #3b3b3b;
+    cursor: pointer;
+}
+
+
+.selected{
+    background-color: #22D3EE;
+    color: white;
+
+}
+.tkn_line{
+    position: relative;
+    top: -1rem;
+}
+
+.landing_card{
+    background-color: #1F2937;
+    padding: 20px;
+    border: 1px solid #3F4854;
+    border-radius: 10px;
+    height: 500px;
+}
+
+.chng_bor{
+    border: 1px solid #AB6E75 !important;
+}
+
+.card_head{
+    border-bottom: 1px solid #3F4854;
+}
+
+.info_iput{
+    background-color: #111827 !important;
+    border: 1px solid #3F4854;
+    border-radius: 10px;
+    padding: 10px 15px;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    width: 100%;
+}
+
+.info_iput::placeholder{
+    color: white;
+}
+
+.drop_menu{
+    border: none !important ;
+    outline: none !important;
+}
+.drop_menu:focus{
+box-shadow:none !important ;
+}
+
+.req_text{
+    color: #3F4854;
+    font-size: 12px;
+    line-height: 10px !important;
+    font-weight: bold;
+
+}
+.dropdown-toggle::after{
+    display: none !important;
+}
+
+.impact_boxs{
+    background-color: transparent;
+    padding:10px  ;
+    border: 1px solid #3F4854;
+    border-radius: 10px;
+}
+
+.impact_label{
+    cursor: pointer;
+}
+.impact_boxs input:hover{
+    cursor: pointer;
+}
+
+.Burn{
+    text-align: center;
+position: relative;
+font-size: 22px;
+color: #22D3EE;
+margin-top: 1rem;
+}
+
+.Burn::before{
+    width: 40%;
+    background-color: #22D3EE;
+    height: 1px;
+    left: 0px;
+    top: 14px;
+    position: absolute;
+    content: "";
+}
+.Burn::after{
+    width: 40%;
+    background-color: #22D3EE;
+    height: 1px;
+    right: 0px;
+    top: 14px;
+    position: absolute;
+    content: "";
+}
+
+
+.decr_btn{
+    background-color: #94A3B8;
+    color: #111827;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border: none;
+}
+.incr_btn{
+    background-color: #94A3B8;
+    color: #111827;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border: none;
+}
+
+.percent{
+    background-color: #111827;
+    border-top: 1px solid #3F4854;
+    border-bottom: 1px solid #3F4854;
+    padding: 10px;
+    text-align: center;
+    color: #3F4854;
+
+
+}
+
+.toggle-container {
+    width: 50px;
+    height: 25px;
+    background-color: #3b3b3b;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 2px;
+}
+
+.toggle-switch {
+    width: 21px;
+    height: 21px;
+    background-color: #ccc;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+.toggle-switch.toggled {
+    transform: translateX(25px);
+    background-color: #4caf50; /* Optional: Change color when toggled */
+}
+
+
+
+@media only screen and (max-width:700px){
+    .landing_card{
+        height: auto ;
+    }
+    .impact_boxs label{
+        font-size: 12px;
+    }
+}
+
+
+.btn-main{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.btn-style{
+    background-color: #22D3EE;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    width: 40%;
+    height: 2.5rem;
+    font-size: 18px;
+}
+.second-btn{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
