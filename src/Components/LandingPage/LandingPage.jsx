@@ -42,7 +42,7 @@ function FeeBoxes({
     <div className="row">
       <div className="col-6 col-md-4">
         <div className="fee_boxs">
-          <p className="text-white text-center">Buy Back</p>
+          <p className="text-white text-center">Marketing Fee</p>
           <div className="d-flex">
             <button
               className="decr_btn"
@@ -65,7 +65,7 @@ function FeeBoxes({
       </div>
       <div className="col-6 col-md-4">
         <div className="fee_boxs">
-          <p className="text-white text-center">Liquidity Fee</p>
+          <p className="text-white text-center">DEV Fee</p>
           <div className="d-flex">
             <button
               className="decr_btn"
@@ -82,13 +82,13 @@ function FeeBoxes({
             </button>
           </div>
           <span className="req_text">
-            Distributes tokens to holder (max 20%)
+          Sends token to your chosen DEV wallet (max 20%)
           </span>
         </div>
       </div>
       <div className="col-6 col-md-4">
         <div className="fee_boxs">
-          <p className="text-white text-center">Burning Fee</p>
+          <p className="text-white text-center">Liquidity Fee</p>
           <div className="d-flex">
             <button
               className="decr_btn"
@@ -105,8 +105,7 @@ function FeeBoxes({
             </button>
           </div>
           <span className="req_text">
-            These fees are triggered whenever a direct transfer happens (not a
-            buy or sell, fees altogether can't exceed 20%)
+            These fees are triggered whenever swap threshold reached(Increase the pool size, fees altogether can't exceed 20%)
           </span>
         </div>
       </div>
@@ -195,9 +194,9 @@ export default function LandingPage() {
             symbol,
             exchangeaddress,
             totalsupply,
-            buyBack,
-            burningFee,
-            liquidityFee,
+            buyBack*10,
+            burningFee*10,
+            liquidityFee*10,
           ],
           account: address,
         });
@@ -322,7 +321,7 @@ export default function LandingPage() {
                       value={getValues?.blockchain}
                     >
                       <option>Select Chain </option>
-                      <option value="bscTestnet">BSC Testnet</option>
+                      <option value="bscTestnet">Metis Mainnet</option>
                     </Form.Select>
 
                     <span className="req_text">
@@ -380,12 +379,12 @@ export default function LandingPage() {
                     </div>
                   ))}
                 </div>
-                <h3 className="Burn">BURN</h3>
+                {/* <h3 className="Burn">BURN</h3>
                 <p className="text-white text-center mt-3">
                   {" "}
                   A simple token (name, symbol, decimals, and supply) with the
                   addition of a function that allows token burning.
-                </p>
+                </p> */}
                 {!isFormValid && (
                   <p style={{ color: "red", fontSize: "18px" }}>
                     Fill all the fields
@@ -463,7 +462,7 @@ export default function LandingPage() {
                   </span>
                 </div>
                 <div className="mt-3">
-                  <p className="text-white mb-2">Exchange*</p>
+                  <p className="text-white mb-2">Tax Wallet</p>
                   {/* <div className="info_iput chng_bor"> */}
                   <input
                     type="text"
@@ -481,11 +480,11 @@ export default function LandingPage() {
                   <span className="req_text">
                     Required:{" "}
                     <span style={{ color: "#AB6E75" }}>
-                      The wallet address that will receive marketing fees (must
-                      conform to a valid ERC20 token address)
+                      The wallet address that will receive marketing, liquidity , dev fees (must
+                      confirm to a valid ERC20 token address)
                     </span>
-                    . It has to be different than the contract deployer address
-                    and the zero (0x000...) address.
+                    . It can be the same as contract deployer address
+                    and can't be zero (0x000...) address.
                   </span>
                 </div>
                 {/* <div className="mt-3">
@@ -517,8 +516,8 @@ export default function LandingPage() {
                   burningFee={burningFee}
                   liquidityFee={liquidityFee}
                 />
-                <p className="text-white fw-bold mt-3 text-start">BLACKLIST</p>
-                <div className="d-flex align-items-center gap-3">
+                {/* <p className="text-white fw-bold mt-3 text-start">BLACKLIST</p> */}
+                {/* <div className="d-flex align-items-center gap-3">
                   <p className="text-white mb-0 fw-semi-bold fs-5">
                     Enable antibot
                   </p>
@@ -535,7 +534,7 @@ export default function LandingPage() {
                       first 48 hours after the token contract deployment
                     </span>
                   </div>
-                </div>
+                </div> */}
                 <div></div>
                 <div className="second-btn">
                   <button
@@ -586,15 +585,15 @@ export default function LandingPage() {
               <div className="landing_card" style={{ height: "auto" }}>
                 <div className="card_head d-flex align-items-center gap-1">
                   <span className="text-white fs-6 fw-semibold">4.</span>
-                  <h1 className="text-white fs-2 fw-bold">Transaction Hash</h1>
+                  <h1 className="text-white fs-2 fw-bold">Your token is minted and transfered to your wallet. See Transaction Hash to get the token Address</h1>
                 </div>
 
                 <div className="mt-3">
                   {hash ? (
                     <a
-                      href={`https://testnet.bscscan.com/tx/${hash}`}
+                      href={`https://metisscan.info/tx/${hash}`}
                       target="_blank"
-                    >{`https://testnet.bscscan.com/tx/${hash}`}</a>
+                    >{`https://metisscan.info/tx/${hash}`}</a>
                   ) : (
                     <p className="text-white mt-2">No Hash ...</p>
                   )}

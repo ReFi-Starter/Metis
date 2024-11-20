@@ -6,7 +6,7 @@ import reportWebVitals from './reportWebVitals';
 
 import { createWeb3Modal, defaultWagmiConfig } from '@web3modal/wagmi/react'
 import { WagmiConfig } from 'wagmi'
-import { bscTestnet } from 'viem/chains'
+import { metis } from 'viem/chains'
 
 
 // 1. Get projectId at https://cloud.walletconnect.com
@@ -21,7 +21,7 @@ const metadata = {
   url: 'https://web3modal.com',
   icons: ['https://avatars.githubusercontent.com/u/37784886']
 }
-const chains = [bscTestnet]
+const chains = [metis]
 const wagmiConfig = defaultWagmiConfig({ chains, projectId, metadata })
 
 // 3. Create modal
